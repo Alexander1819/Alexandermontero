@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flavors - VapourRush</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('download (1).jpg') no-repeat center center fixed; /* Add your image path here */
+  background-size: cover;
+  color: #fff;
+}
+
+    header {
+      background-color: #1f1f1f;
+      color: #00e0ff;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 224, 255, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00e0ff;
+    }
+
+    main {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      margin: 20px auto;
+      max-width: 1100px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .filters {
+      margin-bottom: 40px;
+    }
+
+    .filters select {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+      background: #333;
+      color: #00e0ff;
+    }
+
+    .flavor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .flavor-card {
+      background-color: #1a1a1a;
+      border: 2px solid #00e0ff44;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      position: relative;
+    }
+
+    .flavor-card:hover {
+      transform: scale(1.05);
+      border-color: #00e0ff;
+    }
+
+    .flavor-card img {
+      width: 60px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .flavor-card h3 {
+      color: #00e0ff;
+      margin-bottom: 10px;
+    }
+
+    .flavor-card p {
+      color: #ccc;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    .rating {
+      margin-top: 10px;
+      color: gold;
+    }
+
+    footer {
+      background-color: #000;
+      color: #888;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>VapourRush</h1>
+  <nav>
+    <nav>
+  <ul>
+    <li><a href="h.html">Home</a></li>
+    <li><a href="f.html">Flavors</a></li>
+    <li><a href="s.html">Shop</a></li>
+    <li><a href="b.html">Buy Now!</a></li>
+  </ul>
+</nav>
+
+</header>
+
+<main>
+  <section class="flavor-section">
+    <h2>Explore Our Signature Flavors</h2>
+    <p>From fruity bursts to icy chills, VapourRush brings you a premium selection of flavor profiles to elevate every puff.</p>
+
+    <div class="filters">
+      <label for="category">Filter by Category:</label>
+      <select id="category" onchange="filterFlavors()">
+        <option value="all">All</option>
+        <option value="fruity">Fruity</option>
+        <option value="icy">Icy</option>
+        <option value="dessert">Dessert</option>
+        <option value="tobacco">Tobacco</option>
+      </select>
+    </div>
+
+    <div class="flavor-grid" id="flavorGrid">
+      <div class="flavor-card" data-category="fruity">
+        <img src="p2.jpg" alt="Berry Icon">
+        <h3>Berry</h3>
+        <p>A juicy mix of strawberries, blueberries, and blackberries – a sweet & tangy explosion.</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="flavor-card" data-category="icy fruity">
+        <img src="Messenger_creation_1BE6BFD5-8EBB-4DCC-845C-D199861324EB.jpeg" alt="Mango Icon">
+        <h3>Mango</h3>
+        <p>Ripe mangoes meet a cool menthol finish – tropical freshness in every hit.</p>
+        <div class="rating">★★★★☆</div>
+      </div>
+      <div class="flavor-card" data-category="tobacco">
+        <img src="p4.jpg" alt="Tobacco Icon">
+        <h3>Classic</h3>
+        <p>For those who crave a bold, smooth tobacco flavor with timeless appeal.</p>
+        <div class="rating">★★★☆☆</div>
+      </div>
+      <div class="flavor-card" data-category="icy">
+        <img src="p5.jpg" alt="Mint Icon">
+        <h3>Mint</h3>
+        <p>A sharp, icy blast of peppermint that refreshes and revives.</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="flavor-card" data-category="icy fruity">
+        <img src="Messenger_creation_37E0D4E5-9021-43AF-B239-DD4AF959808E.jpeg" alt="Watermelon Icon">
+        <h3>Watermelon</h3>
+        <p>Sweet watermelon meets arctic cool – crisp and clean satisfaction.</p>
+        <div class="rating">★★★★☆</div>
+      </div>
+      <div class="flavor-card" data-category="dessert">
+        <img src="p7.jpg" alt="Vanilla Icon">
+        <h3>Vanilla</h3>
+        <p>Creamy, smooth vanilla infused with rich custard sweetness – a dessert lover’s dream.</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 VapourRush. All rights reserved
